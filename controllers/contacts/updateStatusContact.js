@@ -1,5 +1,5 @@
-const Contact = require("../../models/contact");
-const statusContactSchema = require("../../schemas/statusContactSchema");
+const Contact = require("../../models");
+const statusContactSchema = require("../../schemas");
 const { RequestError } = require("../../utilities");
 
 const updateStatusContact = async (req, res, next) => {

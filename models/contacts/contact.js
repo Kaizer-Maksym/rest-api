@@ -1,5 +1,5 @@
 const { Schema, model } = require("mongoose");
-const { handleSaveErrors } = require("../utilities");
+const { handleSaveErrors } = require("../../utilities");
 
 const phoneRegexp = /^\(\d{3}\)\s\d{3}-\d{4}$/;
 
