@@ -1,9 +1,9 @@
 const Contact = require("../../models");
+const statusContactSchema = require("../../schemas");
 const { RequestError } = require("../../utilities");
-const { addSchema } = require("../../schemas");
 
-const updateById = async (req, res, next) => {
-  const { error } = addSchema.validate(req.body);
+const updateStatusContact = async (req, res, next) => {
+  const { error } = statusContactSchema.validate(req.body);
   if (error) {
     throw RequestError(400, error.message);
   }
@@ -15,4 +15,4 @@ const updateById = async (req, res, next) => {
   res.json(result);
 };
 
-module.exports = updateById;
+module.exports = updateStatusContact;
