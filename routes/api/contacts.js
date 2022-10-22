@@ -1,8 +1,8 @@
 const express = require("express");
 
-const ctrl = require("../../../controllers/contacts");
-const { ctrlWrapper } = require("../../../utilities");
-const { isValidId } = require("../../../middleWares");
+const ctrl = require("../../controllers/contacts");
+const { ctrlWrapper } = require("../../utilities");
+const { isValidId } = require("../../middleWares");
 
 const router = express.Router();
 
