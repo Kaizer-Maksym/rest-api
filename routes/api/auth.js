@@ -8,7 +8,12 @@ const { upload } = require("../../middleWares");
 
 const router = express.Router();
 
+// signup
 router.post("/register", ctrlWrapper(ctrl.register));
+router.get("/verify/:verificationToken", ctrlWrapper(ctrl.verify));
+router.post("/verify", ctrlWrapper(ctrl.resendEmail));
+
+// signin
 router.post("/login", ctrlWrapper(ctrl.login));
 router.get("/current", authenticate, ctrlWrapper(ctrl.getCurrent));
 router.get("/logout", authenticate, ctrlWrapper(ctrl.logout));
